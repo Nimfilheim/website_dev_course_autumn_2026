@@ -1,0 +1,190 @@
+/* Workshop 3 - Advanced CSS
+   Vitalii Palikhov, Website development 2026 */
+
+/* ========== From workshop 2 ========== */
+
+body {
+  background-color: #f7f7f5;
+  color: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #0e7c7b;
+}
+
+a:hover {
+  color: #b85042;
+}
+
+img {
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+.content-box {
+  max-width: 600px;
+  padding: 20px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  background-color: #edf3f2;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.content-box h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+}
+
+form p {
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* ========== Task 1: CSS transition ========== */
+
+.transition-button {
+  background-color: lightblue;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.transition-button:hover {
+  background-color: lightcoral;
+}
+
+/* ========== Task 2: CSS animation ========== */
+
+.animation-box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 32px;
+  background-color: lightgreen;
+  border-radius: 4px;
+  position: relative;
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+/* ========== Task 3: CSS pseudo-classes ========== */
+
+.pseudo-list {
+  max-width: 600px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.pseudo-list li {
+  padding: 8px 12px;
+}
+
+.pseudo-list li:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.pseudo-list li:nth-child(even) {
+  background-color: white;
+}
+
+/* ========== Task 4: CSS filters ========== */
+
+.filter-image {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.filter-image:hover {
+  filter: grayscale(0%);
+}
+
+/* ========== Task 5: CSS pseudo-elements ========== */
+
+.quote {
+  position: relative;
+  max-width: 600px;
+  margin-left: 0;
+  padding-left: 32px;
+  font-style: italic;
+  color: #444444;
+}
+
+.quote::before {
+  content: "\201C";
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: lightgray;
+}
